@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Kodak 2000",
+    "slug": "react-kodak2000",
+    "scheme": "kodak2000",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tyne.kodak2000",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Kodak 2000 needs the camera to take retro photos.",
+        "NSMicrophoneUsageDescription": "Kodak 2000 records sound with your videos."
+      }
+    },
+    "android": {
+      "package": "com.tyne.kodak2000",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#21488B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Kodak 2000 saves your retro photos to your library.",
+          "savePhotosPermission": "Kodak 2000 saves your retro photos to your library.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ],
+      "expo-video",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#101216",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 288,
+          "resizeMode": "contain"
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
